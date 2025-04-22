@@ -19,10 +19,13 @@ namespace Clarity.Core.Domain
         [MaxLength(5000)]
         public string Body { get; set; }
         [Required]
+        [Display(Name ="Date/Time Created")]
         public DateTime DateTimeCreated { get; set; }
+        [Display(Name = "Date/Time Send")]
         public DateTime? DateTimeSent { get; set; }
         public int Attempts { get; set; }
         public bool Pending { get; set; }
+        [Display(Name = "Send Status Code")]
         public string? SendStatusCode { get; set; }
 
 
