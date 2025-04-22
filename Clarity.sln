@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.Core", "Clarity.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.MVC", "Clarity.MVC\Clarity.MVC.csproj", "{83762CC4-5E33-4F01-8F46-B73D0A66863C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.Jobs.SendMail", "Clarity.Jobs.SendMail\Clarity.Jobs.SendMail.csproj", "{4D22F303-269A-4503-A825-5250CDDBCEC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{83762CC4-5E33-4F01-8F46-B73D0A66863C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83762CC4-5E33-4F01-8F46-B73D0A66863C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83762CC4-5E33-4F01-8F46-B73D0A66863C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D22F303-269A-4503-A825-5250CDDBCEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D22F303-269A-4503-A825-5250CDDBCEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D22F303-269A-4503-A825-5250CDDBCEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D22F303-269A-4503-A825-5250CDDBCEC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
