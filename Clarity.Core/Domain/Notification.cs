@@ -4,15 +4,21 @@ namespace Clarity.Core.Domain
 {
     public class Notification
     {
+        [Key]
         public int Id { get; set; }
         [Required]
+        [MaxLength(100)]
         public string Sender { get; set; }
         [Required]
+        [MaxLength(100)]
         public string Recipient { get; set; }
         [Required]
+        [MaxLength(100)]
         public string Subject { get; set; }
         [Required]
+        [MaxLength(5000)]
         public string Body { get; set; }
+        [Required]
         public DateTime DateTimeCreated { get; set; }
         public DateTime? DateTimeSent { get; set; }
         public int Attempts { get; set; }

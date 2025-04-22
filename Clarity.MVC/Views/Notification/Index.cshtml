@@ -5,7 +5,7 @@
         <div class="card-head">
             <div class="row justify-content-between">
                 <h2>Notifications in the system</h2>
-                <a asp-action="Create">New Notification</a>
+                <a class="btn btn-primary" asp-action="Create">New Notification</a>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th></th>
                     <th>Sender</th>
                     <th>Recipient</th>
                     <th>Subject</th>
@@ -25,12 +25,15 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td><a asp-action="Details" asp-route-id="@item.Id">@item.Id</a></td>
+                        <td><a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a></td>
                         <th>@item.Sender</th>
                         <th>@item.Recipient</th>
                         <th>@item.Subject</th>
                         <th>@item.DateTimeCreated</th>
-                        <th>@item.Pending</th>
+                        <th>
+                        @{ var itemPending = item.Pending ? "checked" : "";}
+                        <input class="form-check-input mt-0" style="font-size: 25px" type="checkbox" @itemPending  disabled />                           
+                        </th>
                     </tr>
                 }
             </tbody>

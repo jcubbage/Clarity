@@ -18,22 +18,41 @@
                     <div class="form-group">
                         <label asp-for="Sender" class="control-label"></label>
                         <input asp-for="Sender" class="form-control" readonly />
-                        <span asp-validation-for="Sender" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Recipient" class="control-label"></label>
                         <input asp-for="Recipient" class="form-control" readonly />
-                        <span asp-validation-for="Sender" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Subject" class="control-label"></label>
                         <input asp-for="Subject" class="form-control" readonly />
-                        <span asp-validation-for="Sender" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Body" class="control-label"></label>
-                        <input asp-for="Body" class="form-control" readonly />
-                        <span asp-validation-for="Sender" class="text-danger"></span>
+                        <textarea asp-for="Body" class="form-control readonly" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Pending" class="control-label"></label>
+                        @{
+                            var itemPending = Model.Pending ? "checked" : "";
+                        }
+                        <input class="form-check-input mt-0" style="font-size: 50px" type="checkbox" @itemPending  disabled />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateTimeCreated" class="control-label"></label>
+                        <input asp-for="DateTimeCreated" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateTimeSent" class="control-label"></label>
+                        <input asp-for="DateTimeSent" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Attempts" class="control-label"></label>
+                        <input asp-for="Attempts" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SendStatusCode" class="control-label"></label>
+                        <input asp-for="SendStatusCode" class="form-control" readonly />
                     </div>
                 </form>
             </div>
