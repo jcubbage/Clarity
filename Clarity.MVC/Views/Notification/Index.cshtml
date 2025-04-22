@@ -1,0 +1,42 @@
+﻿@model List<Clarity.Core.Domain.Notification>
+
+<div class="card equipment-color">
+    <div class="card-header-equipment">
+        <div class="card-head">
+            <div class="row justify-content-between">
+                <h2>Global Equipment Attribute Keys</h2>
+                @*<a class="btn btn-link" asp-action="Create"><i class="fas fa-plus fa-sm" aria-hidden="true" /></i> Create New</a>*@  
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="card-content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Sender</th>
+                    <th>Recipient</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Pending?</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <th>@item.Sender</th>
+                        <th>@item.Recipient</th>
+                        <th>@item.Subject</th>
+                        <th>@item.DateTimeCreated</th>
+                        <th>@item.Pending</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </</div>
+</div>
