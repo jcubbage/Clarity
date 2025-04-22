@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Server=localhost;Database=Clarity;Trusted_Connection=True;"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ClarityDatabase"));
 });
 var app = builder.Build();
 

@@ -21,7 +21,7 @@ namespace Clarity.Core.Domain
 
         public Notification()
         {
-            Pending = false;
+            Pending = true;
             Attempts = 0;
             DateTimeCreated = DateTime.Now;
         }

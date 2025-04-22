@@ -1,0 +1,45 @@
+﻿@model Clarity.Core.Domain.Notification
+
+
+<div class="card">
+    <div class="card-header-equipment">
+        <div class="card-head">
+            <div class="row justify-content-between">
+                <h2>Create Notification</h2>
+                <a class="btn btn-link" asp-action="Index"><i class="fas fa-arrow-left fa-xs"></i> Back to List</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-content">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Sender" class="control-label"></label>
+                        <input asp-for="Sender" class="form-control" />
+                        <span asp-validation-for="Sender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Recipient" class="control-label"></label>
+                        <input asp-for="Recipient" class="form-control" />
+                        <span asp-validation-for="Recipient" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group">
+                        <label asp-for="Subject" class="control-label"></label>
+                        <input asp-for="Subject" class="form-control" />
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Body" class="control-label"></label>
+                        <input asp-for="Body" class="form-control" />
+                        <span asp-validation-for="Body" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

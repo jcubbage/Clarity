@@ -1,0 +1,6 @@
+﻿@Clarity.MVC_HostAddress = https://localhost:7118
+
+GET {{Clarity.MVC_HostAddress}}/api/notifications
+
+###
+
