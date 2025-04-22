@@ -21,6 +21,12 @@ namespace Clarity.MVC.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> Details(int id)
+        {
+            var model = await _context.Notifications.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return View(model);
+        }
+
         public IActionResult Create()
         {
             return View();
@@ -36,7 +42,6 @@ namespace Clarity.MVC.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-
         }
 
     }

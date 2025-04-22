@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Clarity.MVC.Controllers.Api
 {
+    // NOTE!!! since should have security controls to control who can query and create notices!!!!!
+    // AUTHORIZE needs to be created here.
     [Route("api/[controller]")]
     [ApiController]
     public class NotificationsController : ControllerBase
@@ -18,6 +20,7 @@ namespace Clarity.MVC.Controllers.Api
             _context = context;
         }
 
+        
 
         // GET: api/<NotificationsController>
         [HttpGet]
@@ -26,7 +29,6 @@ namespace Clarity.MVC.Controllers.Api
             var model = await _context.Notifications.Where(x => x.Pending).ToListAsync();
             return model;
         }
-
 
 
         // GET api/<NotificationsController>/5
@@ -55,9 +57,5 @@ namespace Clarity.MVC.Controllers.Api
             }
             return submittedNotification;
         }
-
-       
-
-        
     }
 }
